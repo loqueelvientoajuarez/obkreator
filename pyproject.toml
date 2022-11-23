@@ -25,7 +25,10 @@ mkfrsob = "obkreator.feros:mkfrsobs"
 mkwfob = "obkreator.wfi:mkwfobs"
 mkgrndob = "obkreator.grond:mkgrndobs"
 
+[project.urls]
+Source = "https://github.com/loqueelvientoajuarez/obkreator"
+
 [tool.setuptools.dynamic]
 dependencies = {file = "requirements.txt"}
 readme = {file = "README.md"}
-version = {attr = "setuptools.__version__"}
+version = {attr = "obkreator.__version__"}
