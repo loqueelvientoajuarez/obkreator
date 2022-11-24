@@ -4,13 +4,13 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "obkreator"
-dependencies = [
+dependencies = [ # couldn't work with dynamic requirements.txt
     "astropy >= 4.0",
     "numpy >= 1.17",
     "scipy >= 1.5",
     "astroquery >= 0.4",
 ]
-classifiers = [ 
+classifiers = [ # couldn't work with dynamic classifiers.txt
     "Programming Language :: Python :: 3",
     "Development Status :: 3 - Alpha",
     "Operating System :: OS Independent",
