@@ -64,7 +64,8 @@ OB #3 created: OB/GROND-2.2/HD3.obd
 * fix a bug in GROND IR DITs.
 * modify WFI OBs according to new `WFI_img_acq_MoveToPixel` template
 
-#### 0.3.3
+#### 0.4
 
 * fix a bug in obx creation
 * add entry points
+* migration to pyproject.toml 
