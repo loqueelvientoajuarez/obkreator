@@ -69,3 +69,8 @@ OB #3 created: OB/GROND-2.2/HD3.obd
 * fix a bug in obx creation
 * add entry points
 * migration to pyproject.toml 
+
+#### 0.4.1
+
+* fix a bug in low-precision coordinates in obx
+* use requirements.txt

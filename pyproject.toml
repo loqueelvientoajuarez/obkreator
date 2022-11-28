@@ -1,31 +1,17 @@
 [build-system]
-requires = [ "setuptools" ]
 build-backend = "setuptools.build_meta"
+requires = ["setuptools>=45"]
 
 [project]
 name = "obkreator"
-dependencies = [ # couldn't work with dynamic requirements.txt
-    "astropy >= 4.0",
-    "numpy >= 1.17",
-    "scipy >= 1.5",
-    "astroquery >= 0.4",
-]
-classifiers = [ # couldn't work with dynamic classifiers.txt
-    "Programming Language :: Python :: 3",
-    "Development Status :: 3 - Alpha",
-    "Operating System :: OS Independent",
-    "Intended Audience :: Science/Research",
-    "Topic :: Scientific/Engineering :: Astronomy",
-    "License :: Public Domain",
-]
 description = "Observing block creator for ESO/2.2m telescope"
 readme = "README.md"
 requires-python = ">= 3.9"
 authors = [
-    { name = "Régis Lachaume", email = "regis.lachaume@gmail.com" }
+    {name = "Régis Lachaume", email = "regis.lachaume@gmail.com"}
 ]
-license = { file = "LICENSE.txt" } 
-dynamic = [ "version" ]
+license = {file = "LICENSE.txt"} 
+dynamic = ["version", "dependencies", "classifiers"]
 
 [project.scripts]
 mkfrsob = "obkreator.feros:mkfrsobs"
@@ -36,4 +22,6 @@ mkgrndob = "obkreator.grond:mkgrndobs"
 Source = "https://github.com/loqueelvientoajuarez/obkreator"
 
 [tool.setuptools.dynamic]
-version = { attr = "obkreator.__version__" }
+version = {attr = "obkreator.__version__"}
+dependencies = {file = ["requirements.txt"]}
+classifiers = {file = ["classifiers.txt"]}

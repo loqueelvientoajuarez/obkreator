@@ -217,8 +217,10 @@ class Coordinates(coordinates.SkyCoord, MultiargType):
             fmt = 'obd'
 
         coord = self.to_string('hmsdms').split(' ')
-        coord = [re.sub('[dhms]', ':', c)[0:12] for c in coord] 
-        
+        coord = [re.sub('[dhm]', ':', c) for c in coord] 
+        coord = [re.sub('s', '', c) for c in coord]
+        coord = [coord[0][0:12], coord[1][0:13]]
+ 
         # OBD uses a numeric format hhmmss.sss and ddmmss.sss with
         # heading noughts and plus sign removed
         if fmt in ['obd', 'hmmss.sss dmmss.ss']:
